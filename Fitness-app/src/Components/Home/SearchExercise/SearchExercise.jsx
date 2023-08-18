@@ -11,7 +11,7 @@ const SearchExercise=()=>{
     const [dispName,setDispName]=useState("")
     useEffect(()=>{
         const getExerciseData=async()=>{
-           const displayParts=await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPartList`,exerciseOptions)
+           const displayParts=await fetchData(`https://workouts-c2cj.onrender.com/BodyParts`,exerciseOptions)
             setBodyPart([...displayParts])
         }
         getExerciseData()

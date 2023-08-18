@@ -1,6 +1,8 @@
 
 var express=require('express')
 var app=express()
+var  cors= require('cors')
+app.use(cors())
 var {MongoClient,ServerApiVersion}=require('mongodb')
 const uri='mongodb+srv://karthivicky:VF5aF0KsGI5pUPAl@workoutapi.giighg8.mongodb.net/?retryWrites=true&w=majority'
 const client = new MongoClient(uri, {

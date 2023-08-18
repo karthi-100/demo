@@ -12,7 +12,8 @@ const SearchExercise=()=>{
     useEffect(()=>{
         const getExerciseData=async()=>{
            const displayParts=await fetchData(`https://workouts-c2cj.onrender.com/BodyParts`,exerciseOptions)
-            console.log(displayParts);
+           console.log(displayParts); 
+        setBodyPart([...displayParts[0].bodyParts]);
         }
         getExerciseData()
     },[name])
@@ -21,15 +22,16 @@ const SearchExercise=()=>{
     }
     const search= async(names)=>{
         if(names){
+            console.log(names);
         setDispName(names)
-        const exerciseData= await fetchData(`https://exercisedb.p.rapidapi.com/exercises`,exerciseOptions)
+        const exerciseData= await fetchData(`https://workouts-c2cj.onrender.com/workouts`,exerciseOptions)
         const searchExercises=exerciseData.filter(exercise=>
             exercise.name.toLowerCase().includes(names)||
             exercise.target.toLowerCase().includes(names)||
             exercise.bodyPart.toLowerCase().includes(names)
         )
         setExercises(searchExercises)
-        console.log(exercises);
+        console.log(exerciseData);
     }
     }
     const getDisplayData=(data)=>{

@@ -16,13 +16,13 @@ const client = new MongoClient(uri, {
 app.get('/workouts',async(req,res)=>{
   const db=client.db('Workouts')
   const data= await db.collection('Exercise').find().toArray()
-  res.send(data)
+  res.json(data)
 })
 
 app.get('/BodyParts',async(req,res)=>{
   const db=client.db('BodyParts')
 const data=await db.collection('Parts').find().toArray()
-res.send(data)
+res.json(data)
 console.log(data);
 })
 

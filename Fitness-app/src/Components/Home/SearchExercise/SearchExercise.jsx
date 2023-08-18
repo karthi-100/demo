@@ -12,7 +12,7 @@ const SearchExercise=()=>{
     useEffect(()=>{
         const getExerciseData=async()=>{
            const displayParts=await fetchData(`https://workouts-c2cj.onrender.com/BodyParts`,exerciseOptions)
-            setBodyPart([...displayParts])
+            console.log(displayParts);
         }
         getExerciseData()
     },[name])

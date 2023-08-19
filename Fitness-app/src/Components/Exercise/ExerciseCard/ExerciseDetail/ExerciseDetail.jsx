@@ -24,8 +24,10 @@ function ExerciseDetail() {
           setDescription(`Quadriceps include four large muscles located in the front of the thigh: vastus lateralis, vastus medialis, vastus intermedius, and rectus femoris. They start at the pelvis (hip bone) and femur (thigh bone) and extend down to the patella (kneecap) and tibia (shin bone).`)
         else if(exercise.bodyPart==="waist")
           setDescription(`The quadratus lumborum sits deep in the back waist, attaching to the top of the pelvis and traveling up to the last rib and the sides of the lumbar vertebrae. When the quadratus lumborum contracts, it pulls the pelvis and rib cage on the same side closer together. The abdominal obliques also help this action.`)
+        else if(exercise.bodyPart==="back")
+          setDescription(`Your back muscles are the main structural support for your trunk (torso). These muscles help you move your body, including your head, neck, shoulders, arms and legs. Your back muscles work together to allow you to bend over, twist, turn your head and extend your back.`)
         else
-          setDescription(`enter a valid exercise da stark uh`)
+          setDescription(`enter a valid exercise STARCK`)
         
     },[])
   return (
@@ -36,10 +38,10 @@ function ExerciseDetail() {
          <div className='text-lg md:text-xl'>
             <div className='text-center mb-2 sm:text-base md:text-2xl font-bold pb-3'>{exercise.name.charAt(0).toUpperCase()+exercise.name.slice(1)}</div>
             <div className='max-w-lg'>
-            <div className='text-black mb-2 '>Equipment:<span>{exercise.equipment}</span></div>
-            <div className=' mb-3 text-black text-justify'>{description}</div>
-            <div className='text-black font-medium bg-[#4da82f] rounded-full w-fit px-3 py-1 mb-2'>{exercise.bodyPart}</div>
-            <div className='text-black font-medium bg-[#4da82f] rounded-full w-fit px-3 py-1 mb-2'>{exercise.target}</div>
+            <div className='text-black mb-2 '>Equipment:&nbsp;&nbsp;&nbsp;<span>{exercise.eqipment}</span></div>
+            <div className=' mb-3 text-black text-justify text-base'>{description}</div>
+            <div className='text-black font-medium bg-[#4da82f] rounded-full w-fit px-3 py-1 mb-2 cursor-pointer hover:scale-[110%] duration-200 ease-in-out'>{exercise.bodyPart}</div>
+            <div className='text-[#4da82f] font-medium bg-black rounded-full w-fit px-3 py-1 mb-2 cursor-pointer hover:scale-[110%] duration-200 ease-in-out'>{exercise.target}</div>
             </div>  
         </div> 
     </div>

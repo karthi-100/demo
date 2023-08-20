@@ -12,7 +12,7 @@ const Exercise=({data,name})=>{
     const handlePageChange=(e)=>{
         setCurrentPage(e.selected+1)
         console.log(currentPage);
-        window.scrollTo({top:1800, behavior:'smooth'})
+        window.scrollTo({top:0, behavior:'smooth'})
     }
 return(
     <div>

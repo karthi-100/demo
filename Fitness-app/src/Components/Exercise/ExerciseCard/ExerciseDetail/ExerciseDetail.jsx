@@ -26,9 +26,10 @@ function ExerciseDetail() {
           setDescription(`The quadratus lumborum sits deep in the back waist, attaching to the top of the pelvis and traveling up to the last rib and the sides of the lumbar vertebrae. When the quadratus lumborum contracts, it pulls the pelvis and rib cage on the same side closer together. The abdominal obliques also help this action.`)
         else if(exercise.bodyPart==="back")
           setDescription(`Your back muscles are the main structural support for your trunk (torso). These muscles help you move your body, including your head, neck, shoulders, arms and legs. Your back muscles work together to allow you to bend over, twist, turn your head and extend your back.`)
+        else if(exercise.bodyPart==="shoulder")
+          setDescription(`The shoulder has about eight muscles that attach to the scapula, humerus, and clavicle. These muscles form the outer shape of the shoulder and underarm. The muscles in the shoulder aid in a wide range of movement and help protect and maintain the main shoulder joint, known as the glenohumeral joint.`)
         else
-          setDescription(`enter a valid exercise STARCK`)
-        
+          setDescription(`STARCK`)
     },[])
   return (
     <div className='w-screen'>
